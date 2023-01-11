@@ -25,7 +25,7 @@ export default async function handler(
     const octokit = new Octokit({
         auth: process.env['GH-TOKEN']
     })
-    const gh_res = await octokit.request('GET /repos/boon4681/action-experiments/actions/runs')
+    const gh_res = await octokit.request('GET /repos/boon4681/itemsflower/actions/runs')
 
     if (gh_res.status == 200) {
         const data = gh_res.data.workflow_runs.slice(0, 3).map((data: any) => {

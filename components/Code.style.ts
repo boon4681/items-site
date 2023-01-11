@@ -39,10 +39,7 @@ const theme: {
         "msHyphens": "none",
         "hyphens": "none",
         "padding": "1em",
-        "overflow": "auto",
-        "background": "#22272e",
-        'overflowX': 'auto',
-        'overflowY': 'auto'
+        "background": "#22272e"
     },
     ":not(pre) > code[class*=\"language-\"]": {
         "color": "white",
@@ -137,10 +134,7 @@ const light: {
         "msHyphens": "none",
         "hyphens": "none",
         "padding": "1em",
-        "overflow": "auto",
-        "background": "transparent",
-        'overflowX': 'auto',
-        'overflowY': 'auto'
+        "background": "transparent"
     },
 }
 export default {

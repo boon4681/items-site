@@ -3,8 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import Block from '../components/Block'
-import Code from '../components/Code'
-import code from '../components/test'
+import Header from '../components/Header'
+import { js, py } from '../components/preview'
 import Workflow from '../components/Workflow'
 
 const Home: NextPage = () => {
@@ -17,18 +17,15 @@ const Home: NextPage = () => {
       })
     const id = setInterval(() => {
       h()
-    }, 5000)
+    }, 1000)
     h()
     return () => clearInterval(id)
   }, [])
   return (
-    <div className='h-screen'>
+    <>
       <div className='min-h-screen'>
-        <div className='flex items-center p-5 w-full space-x-5 max-w-xl mx-auto'>
-          <div>Items Docs</div>
-          <div>Itemsflower Docs</div>
-        </div>
-        <div className='flex items-center flex-col w-full px-5'>
+        <Header></Header>
+        <div className='flex items-center flex-col w-full'>
           <div className='flex items-center flex-col max-w-xl w-full'>
             <Image src="/items.svg" alt="Items Logo" width={128} height={128} />
             <div className='mt-2 text-xl'>ITEMS</div>
@@ -37,25 +34,39 @@ const Home: NextPage = () => {
               <span>through python and opengl without open the game.</span>
               <span><span className='bg-amber-500 text-white px-1 rounded mx-1'>Itemsflower</span>provided colors for template based blocks and items.</span>
             </div>
-            <div className='w-full max-w-xl'>
+            <Block langs={[
+              {
+                'code': js,
+                'language': 'Javascript'
+              },
+              {
+                'code': py,
+                'language': 'Python'
+              }
+            ]}></Block>
+            <div className='w-full max-w-xl mt-6'>
               <div className='text-lg'>
                 Itemsflower actions status
               </div>
               <div className='flex flex-col space-y-1 my-3 w-full'>
-                {workflows.map((data, i) => <Workflow.status key={`flower-${i}`} status={data}></Workflow.status>)}
+                {workflows.map((data, i) => <Workflow.status key={`flower-${i}`} show={i == 0} status={data}></Workflow.status>)}
               </div>
             </div>
-            <Block langs={[{
-              'code': code,
-              'language': 'Javascript'
-            }]}></Block>
           </div>
         </div>
       </div>
-      <div className='w-full sticky bottom-0 left-0'>
-        <button className='bg-black text-white px-3 py-2 rounded-md hover:bg-black/90 transition-colors z-50 absolute right-3 bottom-3'>Login with Github</button>
-      </div>
-    </div>
+      {/* <div className='w-full sticky bottom-20 left-0 mt-5 flex justify-end'>
+        <div className='absolute -top-24 right-7 flex flex-col'>
+          <div>FOR boon4681 ONLY</div>
+          <div className='mx-auto'>
+            <div>|</div>
+            <div>|</div>
+            <div>V</div>
+          </div>
+        </div>
+        <button className='bg-black text-white px-3 py-2 rounded-md hover:bg-black/90 transition-colors z-50 m-3 absolute'>Login with Github</button>
+      </div> */}
+    </>
   )
 }
 

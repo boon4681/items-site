@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: 'JetBrain';
-    src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: JetBrain,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: JetBrain, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -28,6 +28,7 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
@@ -35,6 +36,21 @@ a {
 }
 
 
-.code-light .token{
+.code-light .token {
   filter: brightness(0.8) saturate(1.2);
 }
+
+// .block>.code {
+//   &::-webkit-scrollbar {
+//     width: 12px;
+//     height: 12px;
+//   }
+
+//   &::-webkit-scrollbar-track {
+//     background: transparent;
+//   }
+
+//   &::-webkit-scrollbar-thumb {
+//     background-color: #9c9c9c81;
+//   }
+// }
