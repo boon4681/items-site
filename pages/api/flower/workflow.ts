@@ -23,7 +23,7 @@ export default async function handler(
     res: NextApiResponse
 ) {
     const octokit = new Octokit({
-        auth: process.env['GH-TOKEN']
+        auth: process.env['GH_TOKEN']
     })
     const gh_res = await octokit.request('GET /repos/boon4681/itemsflower/actions/runs')
 
