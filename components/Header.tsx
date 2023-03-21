@@ -7,10 +7,10 @@ export default () => {
             <a href={'/items-docs'} className='hover:text-black/50 transition-all hover:px-3'>Items Docs</a>
             <div>|</div>
             <a href={'/flower-docs'} className='hover:text-black/50 transition-all hover:px-3'>Itemsflower Docs</a>
-            <div>|</div>
+            {/* <div>|</div>
             <a href={'/browse'} className='hover:text-black/50 transition-all hover:px-3'>Browse</a>
             <div>|</div>
-            <a href={'/status'} className='hover:text-black/50 transition-all hover:px-3'>Status</a>
+            <a href={'/status'} className='hover:text-black/50 transition-all hover:px-3'>Status</a> */}
         </div>
     )
 }
